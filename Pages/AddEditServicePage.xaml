@@ -1,0 +1,76 @@
+﻿<Page x:Class="WpfApp1.Pages.AddEditServicePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditServicePage">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="40 0 0 0" HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Top"  >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock>Название</TextBlock>
+                        <TextBox Text="{Binding Title}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock>Цена</TextBlock>
+                        <TextBox Text="{Binding Cost}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock>Время выполнения в минутах</TextBlock>
+                        <TextBox Text="{Binding DurationInSeconds}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock>Описание</TextBlock>
+                        <TextBox Text="{Binding Description}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock>Скидка</TextBlock>
+                        <TextBox Text="{Binding Discount}" ></TextBox>
+                    </StackPanel>
+                    <Button HorizontalAlignment="Center" Style="{StaticResource MyButton}" x:Name="SaveBtn" Click="SaveBtn_Click_1"  >Сохранить</Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" >
+                    <Image Width="200" Height="180" Source="{Binding MainImagePath}" Margin="5"></Image>
+                    <Button Style="{StaticResource MyButton}" HorizontalAlignment="Center" x:Name="SaveImgBth" Click="SaveImgBth_Click"  >Добавить изображение</Button>
+                </StackPanel>
+            </StackPanel>
+        
+           
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" >
+
+                <Button FontSize="50" x:Name="LeftBtn" Content="&lt;"/>
+                <ListView x:Name="ExcessImage" Width="500" Height="190"
+                          d:ItemsSource="{d:SampleData ItemCount=5}">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Margin="5 0 0 0"
+                                   Width="150" 
+                                   Height="110" 
+                                   Source="{Binding PhotoPath}"/>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button FontSize="50"  x:Name="RightBtn"
+                    Content="&gt;"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style ="{StaticResource MyButton}">Добавление дополнительного изображения</Button>
+                <Button Style ="{StaticResource MyButton}">Удалить доплнительное изображение</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

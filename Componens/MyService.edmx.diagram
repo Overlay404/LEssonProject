@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f1f5834c67a2437994eaa1861edbde57" Name="Diagram1">
+        <EntityTypeShape EntityType="MyServiceModel.Client" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.ClientService" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.Gender" Width="1.5" PointX="1.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.Manufacturer" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.Product" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.ProductSale" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.Role" Width="1.5" PointX="1.5" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.Service" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.ServicePhoto" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.Tag" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyServiceModel.User" Width="1.5" PointX="1.5" PointY="17.125" IsExpanded="true" />
+        <AssociationConnector Association="MyServiceModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_Client_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="MyServiceModel.TagOfClient" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
